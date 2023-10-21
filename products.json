@@ -1,0 +1,88 @@
+{
+        "jewlery": [
+            {
+                "name:": "Diamond Necklace",
+                "description": "Exquisite diamond necklace with white gold chain",
+                "size": "one size",
+                "price": "Price: $5000",
+                "categories": ["Gold", "Diamond"]
+            },
+            {
+                "name:": "Emerald Ring",
+                "description": "Elegant emerald ring set in 18k gold",
+                "size": "Size: 6",
+                "price": "Price: $1200",
+                "categories": ["Gold", "Emerald"]
+            },
+            {
+                "name:": "Sapphire Earrings",
+                "description": "Sparkling sapphire earrings with diamond accents",
+                "size": "one size",
+                "price": "Price: $1500",
+                "categories": ["Diamond"]
+            },
+            {
+                "name:": "Pearl Bracelet",
+                "description": "Classic pearl bracelet with silver clasp",
+                "size": "Size: 6",
+                "price": "Price: $250",
+                "categories": ["Pearl", "Silver"]
+            },
+            {
+                "name:": "Ruby Pendant",
+                "description": "Stunning ruby pendant on a white gold chain",
+                "size": "one size",
+                "price": "Price: $800",
+                "categories": ["Gold"]
+            },
+            {
+                "name:": "Diamond Stud Earrings",
+                "description": "Classic diamond stud earrings in 14k white gold",
+                "size": "one size",
+                "price": "Price: $2000",
+                "categories": ["Gold", "Diamond"]
+            },
+            {
+                "name:": "Gold Bangle",
+                "description": "Thin gold bangle bracelet with a delicate design",
+                "size": "one size",
+                "price": "Price: $350",
+                "categories": ["Gold"]
+            },
+            {
+                "name:": "Opal Necklace",
+                "description": "Opal pendant necklace with a silver chain",
+                "size": "one size",
+                "price": "Price: $450",
+                "categories": ["Silver"]
+            },
+            {
+                "name:": "Amethyst Earrings",
+                "description": "Elegant amethyst earrings in sterling silver",
+                "size": "one size",
+                "price": "Price: $550",
+                "categories": ["Silver", "Amethyst"]
+            },
+            {
+                "name:": "Platinum Wedding Ring",
+                "description": "A beautiful platinum wedding ring with intricate design",
+                "size": "Size: 6",
+                "price": "Price: $3000",
+                "categories": ["Platinum"]
+            },
+            {
+                "name:": "Pearl Drop Earrings",
+                "description": "Graceful pearl drop earrings in 18k gold",
+                "size": "one size",
+                "price": "Price: $750",
+                "categories": ["Gold", "Pearl"]
+            },
+            {
+                "name:": "Garnet Bracelet",
+                "description": "Stunning garnet bracelet with a silver clasp",
+                "size": "one size",
+                "price": "Price: $320",
+                "categories": ["Garnet", "Silver"]
+            }
+        ]
+    }
