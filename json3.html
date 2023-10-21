@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jewelry Products</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">  
+</head>
+
+<body>
+    <h1>Jewelry List</h1>
+    <div id="json-container"></div>
+    <div class="container">
+        <select id="category_selector">
+            <option value=""></option>
+            <option value="Gold"> Gold </option>
+            <option value="Silver">Silver</option>
+            <option value="Pearl">Pearl</option>
+            <option value="Emerald">Emerald</option>
+            <option value="Diamond">Diamond</option>
+            <option value="Amethyst">Amethyst</option>
+            <option value="Garnet">Garnet</option>
+        </select>
+        <button id="filter-button">Filter</button>
+    </div>
+
+    <div id="new_jewelry"></div>
+    <div id="jewelry"></div>
+
+    <script language="javascript">
+        var jewelryProducts; // Declare a variable to store the jewelry products data
+
+        $.get("https://mehrdewan.github.io/Assignment6/products.json", function (data) {
+            jewelryProducts = data.jewelry; // Store the jewelry products data in the variable
+        });
+
+        function filterProducts(selectedCat) {
+            var filteredProducts = jewelryProducts.filter(function (jewelry) {
+                return jewelry.categories.includes(selectedCat); // returns filtered version of jewelry
+            });
+
+            var resultHTML = "";
+            // loops through to print names of jewelry that match user request
+            for (var i = 0; i < filteredProducts.length; i++) {
+                resultHTML += filteredProducts[i].name + "<br>" + "<br>" + "<br>";
+            }
+
+            document.getElementById("jewelry").innerHTML = resultHTML;
+        }
+
+        // event handler for the filter button
+        document.getElementById("filter-button").addEventListener("click", function () {
+            var selectedCategory = document.getElementById("category_selector").value;
+            filterProducts(selectedCategory);
+        });
+    </script>
+</body>
+</html>
