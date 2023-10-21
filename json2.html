@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jewelry Products</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+
+    <style type="text/css">
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: rgba(246, 191, 200, 0.486);
+            color: #black;
+            padding: 20px 0;
+            margin: 0;
+        }
+
+        #json-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border: 4px solid rgba(246, 191, 200, 0.486);
+            border-radius: 5px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Jewelry List</h1>
+    <div id="json-container"></div>
+
+    <script language="javascript">
+        $.get("https://mehrdewan.github.io/Assignment6/products.json", function (data) {
+            var jewelryProducts = data.jewelry;
+
+            var str = "<ul>";
+            jewelryProducts.forEach(function (product) {
+                str += "<li>" + product.name + " - " + product.description + "<br>" +
+                    "Size: " + product.size + "<br>" +
+                    product.price + "<br>" +
+                    "Categories: " + product.categories.join(", ") + "</li>" +
+                    "<br>";
+            });
+            str += "</ul";
+
+            document.getElementById('json-container').innerHTML = str;
+        });
+    </script>
+</body>
+</html>
